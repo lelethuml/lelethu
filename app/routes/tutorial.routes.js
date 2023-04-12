@@ -1,9 +1,14 @@
 module.exports = app => {
     const tutorials = require("../controllers/tutorial.controller.js");
-  
+    
+    //Creates routes for communication between backend and front
     var router = require("express").Router();
   
     // Create a new Tutorial
+//     router --- create route
+//      post --- the type of route it is (post sends data)
+//     "/" -- how you reach the route
+//     tutorials.create -- the function that would run when this route is called
     router.post("/", tutorials.create);
   
     // Retrieve all Tutorials
